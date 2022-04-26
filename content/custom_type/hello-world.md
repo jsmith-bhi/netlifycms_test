@@ -1,6 +1,6 @@
 ---
-title: Hello, World!!
-thumbnail: img/rick_roller-16x9.jpg
+title: Hello, everyone!!!!!!
+thumbnail: ""
 alt_copy: Fusce volutpat justo pellentesque dolor congue, sit amet suscipit mi
   eleifend. Sed vitae aliquet neque. Sed est elit, tincidunt eget cursus nec,
   cursus a elit. Aenean viverra facilisis quam at viverra. Aliquam dictum vel
