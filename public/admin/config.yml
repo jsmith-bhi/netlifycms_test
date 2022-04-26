@@ -4,14 +4,8 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - label: "Pages"
-    name: "pages"
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Content Body", name: "body", widget: "markdown"}
+  - label: "Static Pages"
+    name: "static_pages"
     - label: "Home"
       name: "home"
       file: "content/home.md"
@@ -26,6 +20,14 @@ collections:
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Publish Date", name: "date", widget: "datetime"}
         - {label: "Test Copy Block", name: "copy_block", widget: "markdown"}
+  - label: "Pages"
+    name: "pages"
+    create: true
+    fields:
+      - {label: "Page Title", name: "page_title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Content Body", name: "body", widget: "markdown"}
   - label: "Custom Type"
     name: "custom_type"
     folder: "_posts/custom_type"
