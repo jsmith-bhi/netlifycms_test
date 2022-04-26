@@ -36,17 +36,18 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Alt Copy", name: "alt_copy", widget: "markdown"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Text", name: "text", widget: "text"}
       - {label: "String", name: "string", widget: "string"}
+      - {label: "Text", name: "text", widget: "text"}
       - label: "Repeater Parity"
         name: "repeater_parity"
         widget: "list"
-        summary: "Summary"
+        summary: "{{ fields.block_summary }}"
         fields:
+        - {label: "Block Summary", name: "block_summary", widget: "string"}
         - {label: 'Color Picker', name: 'color_picker', widget: 'color', enableAlpha: true, allowInput: true}
         - {label: "Boolean", name: "is_checked", widget: "boolean", default: true}
         - {label: "Copy Block Content", name: "copy_block_content", widget: "markdown"}
