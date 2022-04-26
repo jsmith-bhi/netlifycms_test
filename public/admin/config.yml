@@ -37,18 +37,18 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Alt Copy", name: "alt_copy", widget: "markdown"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "String", name: "string", widget: "string"}
-      - {label: "Text", name: "text", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - {label: "Alt Copy", name: "alt_copy", widget: "markdown", required: false}
+      - {label: "Publish Date", name: "date", widget: "datetime", required: false}
+      - {label: "String", name: "string", widget: "string", required: false}
+      - {label: "Text", name: "text", widget: "text", required: false}
       - label: "Repeater Parity"
         name: "repeater_parity"
         widget: "list"
-        summary: "{{ fields.block_summary }}"
+        summary: "{{fields.block_summary}}"
         fields:
-        - {label: "Block Summary", name: "block_summary", widget: "string"}
-        - {label: 'Color Picker', name: 'color_picker', widget: 'color', enableAlpha: true, allowInput: true}
-        - {label: "Boolean", name: "is_checked", widget: "boolean", default: true}
-        - {label: "Copy Block Content", name: "copy_block_content", widget: "markdown"}
+        - {label: "Block Summary", name: "block_summary", widget: "string", required: false}
+        - {label: 'Color Picker', name: 'color_picker', widget: 'color', enableAlpha: true, allowInput: true, required: false}
+        - {label: "Boolean", name: "is_checked", widget: "boolean", default: true, required: false}
+        - {label: "Copy Block Content", name: "copy_block_content", widget: "markdown", required: false}
 
