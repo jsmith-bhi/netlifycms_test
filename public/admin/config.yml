@@ -13,14 +13,14 @@ collections:
       fields:
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Content", name: "content", widget: "markdown"}
+        - {label: "Home Content", name: "body", widget: "markdown"}
     - label: "Test Page"
       name: "testpage"
       file: "content/testpage.md"
       fields:
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Test Copy Block", name: "copy_block", widget: "markdown"}
+        - {label: "Test Copy Block", name: "body", widget: "markdown"}
   - label: "Pages"
     name: "pages"
     folder: "content"
