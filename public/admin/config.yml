@@ -4,30 +4,46 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: "pages"
-    label: "Pages"
+  - label: "Pages"
+    name: "pages"
     create: true
-    files:
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Content Body", name: "body", widget: "markdown"}
     - label: "Home"
       name: "home"
       file: "content/home.md"
       fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown" }
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Content", name: "content", widget: "markdown"}
     - label: "Test Page"
       name: "testpage"
       file: "content/testpage.md"
       fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown" }
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Publish Date", name: "date", widget: "datetime"}
+        - {label: "Test Copy Block", name: "copy_block", widget: "markdown"}
   - label: "Custom Type"
     name: "custom_type"
     folder: "_posts/custom_type"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Alt Copy", name: "alt_copy", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Text", name: "text", widget: "text"}
+      - {label: "String", name: "string", widget: "string"}
+      - label: "Repeater Parity"
+        name: "repeater_parity"
+        widget: "list"
+        summary: "Summary"
+        fields:
+        - {label: 'Color Picker', name: 'color_picker', widget: 'color', enableAlpha: true, allowInput: true}
+        - {label: "Boolean", name: "is_checked", widget: "boolean", default: true}
+        - {label: "Copy Block Content", name: "copy_block_content", widget: "markdown"}
+
